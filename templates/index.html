@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Users {% endblock %}</h1>
+    <ul>
+        {% for usuario in tb_usuario %}
+            <li>ID: {{ usuario[0] }}, Nome: {{ usuario[1] }}, Nascimento: {{ usuario[2] }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
